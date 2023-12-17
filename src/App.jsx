@@ -1,21 +1,15 @@
 import 'tailwindcss/tailwind.css';
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-
-import CustomModal from './components/CustomModal';
-
-
-
+import {Routes, Route, BrowserRouter} from "react-router-dom"
+import Admin from './Pages/Admin';
+Admin
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-    <CustomModal />
-
-   
-    </>
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Admin/>}/>
+    </Routes>
+    </BrowserRouter>
   )
 }
 
